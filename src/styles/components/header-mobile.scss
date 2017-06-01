@@ -1,0 +1,42 @@
+#header-mobile {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  box-sizing: border-box;
+  display: none;
+  padding: 0 60px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 1px rgba(0,0,0,0.25);
+}
+
+@media screen and (max-width: 900px) {
+  #header-mobile {
+    display: block;
+  }
+}
+
+#logo-mobile {
+  display: inline-block;
+}
+
+#logo-mobile img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+}
+
+#header-mobile .menu {
+  position: absolute;
+  left: 12px;
+  top: 17px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 26px;
+  color: #34495e;
+}

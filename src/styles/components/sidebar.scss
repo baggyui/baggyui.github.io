@@ -1,0 +1,41 @@
+.sidebar {
+  position: fixed;
+  z-index: 3;
+  top: 61px;
+  left: 0;
+  bottom: 0;
+  padding: 30px 0 30px 60px;
+  width: 260px;
+  margin-right: 20px;
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    padding-left: 20px;
+    transform: translate(-280px, 0);
+
+    &.open {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.sidebar-test li {
+  color: #1f2d3d;
+  line-height: 47px;
+  font-size: 14px;
+
+  a {
+    color: #1f2d3d;
+    transition: all 0.2s ease;
+
+    &.router-link-active,
+    &:hover {
+      color: #20a0ff;
+    }
+  }
+}
