@@ -41,6 +41,7 @@
       <template slot="code">{{ code.multi }}</template>
       <template slot="desc">
         <p><code>type</code>属性表示通知类型，分别有<code>success</code><code>warning</code><code>error</code><code>info</code> 4 种类型。</p>
+        <p style="margin-top:10px;">Notification 支持两种调用 <code>type</code> 的方式：一种是直接当做参数属性传入（如左侧的警告消息）；另一种则是当做 <code>$notify</code> 的属性（如左侧的错误消息）。</p>
       </template>
     </ba-demo>
 
@@ -140,10 +141,9 @@
       },
 
       openNotify6() {
-        this.$notify({
+        this.$notify.error({
           title: '失败',
-          message: '这是一条失败的通知',
-          type: 'error'
+          message: '这是一条失败的通知'
         });
       },
 

@@ -74,10 +74,9 @@ code.multi = `
       },
 
       openNotify6() {
-        this.$notify({
+        this.$notify.error({
           title: '失败',
-          message: '这是一条失败的消息',
-          type: 'error'
+          message: '这是一条失败的消息'
         });
       },
 

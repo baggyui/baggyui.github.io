@@ -54,9 +54,8 @@ code.multi = `
       },
 
       openFailMessage() {
-        this.$message({
-          message: '这是一条错误的消息提示',
-          type: 'error'
+        this.$message.error({
+          message: '这是一条错误的消息提示'
         });
       },
 

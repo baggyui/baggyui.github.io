@@ -37,6 +37,7 @@
       <template slot="code">{{ code.multi }}</template>
       <template slot="desc">
         <p><code>type</code>属性表示各种消息类型，分别有<code>success</code>、<code>warning</code>、<code>error</code>、<code>info</code> 4 种类型。</p>
+        <p style="margin-top:10px;">Message 支持两种调用 <code>type</code> 的方式：一种是直接当做参数属性传入（如左侧的警告消息）；另一种则是当做 <code>$message</code> 的属性（如左侧的错误消息）。</p>
       </template>
     </ba-demo>
 
@@ -107,9 +108,8 @@
       },
 
       openFailMessage() {
-        this.$message({
-          message: '这是一条错误的消息提示',
-          type: 'error'
+        this.$message.error({
+          message: '这是一条错误的消息提示'
         });
       },
 
