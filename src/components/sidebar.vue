@@ -43,6 +43,9 @@
       <li>
         <router-link to="/table">表格 Table</router-link> 
       </li>
+      <li>
+        <router-link to="/breadcrumb">面包屑 Breadcrumb</router-link> 
+      </li>
     </ul>
   </div>
 </template>

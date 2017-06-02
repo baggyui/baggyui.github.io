@@ -63,6 +63,10 @@ const routes = [
   {
     path: '/table',
     component: r => require.ensure([], () => r(require('./page/table.vue')), 'table')
+  },
+  {
+    path: '/breadcrumb',
+    component: r => require.ensure([], () => r(require('./page/breadcrumb.vue')), 'breadcrumb')
   }
 ];
 
