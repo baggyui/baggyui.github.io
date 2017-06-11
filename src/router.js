@@ -76,6 +76,11 @@ const router = new VueRouter({
 
 router.afterEach(route => {
   window.scrollTo(0, 0);
+
+  const visible = window.Bus.barVisible;
+  if (visible) {
+    window.Bus.setBarVisible(false);
+  }
 });
 
 export default router;

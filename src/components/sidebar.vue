@@ -1,5 +1,8 @@
 <template>
-  <div class="sidebar" :class="classes">
+  <div
+    class="sidebar"
+    :class="classes"
+    v-clickoutside="handleClose">
     <ul class="sidebar-test">
       <li>
         <router-link to="/icon">图标 Icon</router-link>
@@ -51,14 +54,33 @@
 </template>
 
 <script>
+  import clickoutside from '../utils/clickoutside';
+
   export default {
-    props: {
-      visible: Boolean
-    },
+    directives: { clickoutside },
 
     computed: {
       classes() {
         return this.visible ? 'open' : '';
+      },
+
+      visible() {
+        return window.Bus.barVisible;
+      },
+
+      parent() {
+        return document.getElementById('main');
+      }
+    },
+
+    methods: {
+      handleClose(e) {
+        if (!this.parent.contains(e.target)) return;
+
+        const visible = window.Bus.barVisible;
+        if (visible) {
+          window.Bus.setBarVisible(false);
+        }
       }
     }
   };

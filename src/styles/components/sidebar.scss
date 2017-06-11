@@ -1,7 +1,7 @@
 .sidebar {
   position: fixed;
   z-index: 3;
-  top: 61px;
+  top: 60px;
   left: 0;
   bottom: 0;
   padding: 30px 0 30px 60px;
@@ -16,7 +16,8 @@
 @media screen and (max-width: 900px) {
   .sidebar {
     padding-left: 20px;
-    transform: translate(-280px, 0);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+    transform: translate(-290px, 0);
 
     &.open {
       transform: translate(0, 0);

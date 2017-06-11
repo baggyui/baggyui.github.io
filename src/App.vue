@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <ba-header></ba-header>
-    <ba-header-mobile @toggle-sidebar="handleToggle"></ba-header-mobile>
+    <ba-header-mobile></ba-header-mobile>
     <div id="main">
-      <ba-sidebar :visible="visible"></ba-sidebar>
+      <ba-sidebar></ba-sidebar>
       <div id="article">
         <router-view></router-view>
       </div>
@@ -23,18 +23,6 @@
       'ba-header': Header,
       'ba-header-mobile': HeaderMobile,
       'ba-sidebar': Sidebar
-    },
-
-    data() {
-      return {
-        visible: false
-      };
-    },
-
-    methods: {
-      handleToggle(val) {
-        this.visible = val;
-      }
     }
   };
 </script>

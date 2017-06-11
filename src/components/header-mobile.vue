@@ -19,8 +19,8 @@
 
     methods: {
       handleToggle() {
-        this.showSidebar = !this.showSidebar;
-        this.$emit('toggle-sidebar', this.showSidebar);
+        const visible = window.Bus.barVisible;
+        window.Bus.setBarVisible(!visible);
       }
     }
   };
