@@ -48,6 +48,7 @@
           :columns="columns3"
           :data="data2"
           stripe
+          border
           height="150"></v-table>
       </template>
       <template slot="code">{{ code.height }}</template>

@@ -53,6 +53,12 @@
         </thead>
         <tbody>
           <tr>
+            <td>current</td>
+            <td>当前页码</td>
+            <td>Number</td>
+            <td>1</td>
+          </tr>
+          <tr>
             <td>total</td>
             <td>数据总数</td>
             <td>Number</td>
