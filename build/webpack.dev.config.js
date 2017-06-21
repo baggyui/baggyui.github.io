@@ -41,7 +41,12 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            'scss': 'vue-style-loader!css-loader!sass-loader'
+            'scss': {
+              loader: 'vue-style-loader?sourceMap!css-loader?sourceMap!sass-loader?sourceMap',
+              options: {
+                sourceMap: true
+              }
+            }
           }
         }
       },
@@ -62,11 +67,11 @@ module.exports = {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: [{
-          loader: 'style-loader'
+          loader: 'style-loader?sourceMap'
         }, {
-          loader: 'css-loader'
+          loader: 'css-loader?sourceMap'
         }, {
-          loader: 'sass-loader'
+          loader: 'sass-loader?sourceMap'
         }]
       },
       {
