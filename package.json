@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "baggyui": "^1.0.2",
+    "baggyui": "^1.0.4",
     "highlightjs": "^9.10.0",
     "vue": "^2.2.6",
     "vue-router": "^2.2.1"
